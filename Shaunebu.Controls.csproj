@@ -20,7 +20,7 @@
 		<Company>Shaunebu ®</Company>
 		<Description>Shaunebu Controls in .NET MAUI</Description>
 		<PackageProjectUrl>https://www.nuget.org/packages/Shaunebu.MAUI.Controls/</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/jpd21122012/MAUI.FloatingChatButton.git</RepositoryUrl>
+		<RepositoryUrl>https://github.com/jpd21122012/Shaunebu.MAUI.Controls</RepositoryUrl>
 		<PackageTags>maui</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageIcon>Shaunebu.png</PackageIcon>
