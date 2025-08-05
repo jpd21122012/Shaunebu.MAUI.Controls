@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Maui;
-using MauiApp7.ViewModels;
+using Shaunebu.Controls.ViewModels;
 
 namespace Shaunebu.Controls
 {
