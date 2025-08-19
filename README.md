@@ -2,16 +2,17 @@
 ![NuGet Version](https://img.shields.io/nuget/v/Shaunebu.MAUI.Controls?color=blue&label=NuGet)
 ![Platform Support](https://img.shields.io/badge/Platforms-Android%20|%20iOS-lightgrey)
 ![MAUI Version](https://img.shields.io/badge/.NET%20MAUI-%3E%3D9.0-blueviolet)
-
+<a href="https://www.buymeacoffee.com/jorgepd" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" align="left" style="height: 37px !important;width: 170px !important;" ></a>
+<br>
 ![MAUI Controls Showcase](https://jpdblog.blob.core.windows.net/apps/ShaunebuControls.png)  
 
 ## 📦 Included Controls
 
 | Control | Description | Documentation |
 |---------|-------------|---------------|
-| [**FloatingChatButton**](#floatingchatbutton) | Smart circular action button with chat features | [Details](Docs/FloatingChatButton.md)  |
+| [**FloatingChatButton**](#floatingchatbutton) | Smart circular action button with chat features | [Details](Docs/FloatingChatButton.md) |
 | [**KanbanBoard**](#kanbanboard) | Drag-and-drop task management board | [Details](Docs/KanbanBoard.md) |
-
+| [**DockLayout**](#docklayout) |  Edge-docking container with priority and animation support | [Details](Docs/DockLayout.md) |
 ---
 
 ## ✨ FloatingChatButton
@@ -65,6 +66,43 @@
 ```
 
 
+
+## ✨ DockLayout
+`Shaunebu.Controls.DockLayout`
+
+### Features
+- Edge Docking (Top/Left/Right/Bottom/Fill)
+- Auto-fill last child (LastChildFill)
+- Priority Control (DockPriority)
+- Smart Spacing between elements
+- Animated Transitions
+- Size Constraints (Min/Max)
+
+```
+<controls:DockLayout 
+    Spacing="5" 
+    LastChildFill="True"
+    AnimateResize="True">
+    
+    <!-- Header -->
+    <Label DockLayout.Dock="Top" 
+           Text="Header" 
+           HeightRequest="50"/>
+
+    <!-- Sidebar -->
+    <BoxView DockLayout.Dock="Left" 
+             WidthRequest="100"
+             DockLayout.MinDockSize="80,0"/>
+
+    <!-- Main Content -->
+    <Frame DockLayout.Dock="Fill"
+           CornerRadius="10">
+        <Label Text="Content"/>
+    </Frame>
+</controls:DockLayout>
+```
+
+
 ## 🚀 Getting Started
 ### Installation
 ```
@@ -108,8 +146,8 @@ Example:
 
 Report issues:  
 
-📧 [jorge.p@jpdblog.com](https://mailto:jorge.p@jpdblog.com)  
-🐛 [GitHub Issues](https://github.com/jpd21122012/FloatingChatButton/issues)
+📧 [jorge.p@jpdblog.com](https://mailto:support@shaunebu.com)  
+🐛 [GitHub Issues](https://github.com/jpd21122012/Shaunebu.MAUI.Controls/issues)
 
 ----------
 ### 📄 License
