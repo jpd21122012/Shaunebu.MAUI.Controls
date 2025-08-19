@@ -47,6 +47,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\CustomSwitch.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\FloatingChatButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

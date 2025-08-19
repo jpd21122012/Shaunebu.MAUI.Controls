@@ -14,6 +14,7 @@
 | [**KanbanBoard**](#kanbanboard) | Drag-and-drop task management board | [Details](Docs/KanbanBoard.md) |
 | [**DockLayout**](#docklayout) |  Edge-docking container with priority and animation support | [Details](Docs/DockLayout.md) |
 | [**SegmentedControl**](#segmentedcontrol) |  A customizable and feature-rich segmented control | [Details](Docs/SegmentedControl.md) |
+| [**Custom Switch**](#customswitch) | A fully customizable switch contro | [Details](Docs/CustomSwitch.md) |
 ---
 
 ## ✨ FloatingChatButton
@@ -126,6 +127,34 @@
     BorderColor="Gray"
     BorderWidth="1" />
 ```
+
+
+
+## ✨ CustomSwitch
+`Shaunebu.Controls.CustomSwitch`
+
+### Features
+- Display "ON"/"OFF" or any custom text
+- Configurable selection animations with bounce effects
+- Different colors for on/off states
+- Customizable shadow for the thumb
+- Swipe to toggle functionality
+- Adjustable track and thumb dimensions
+
+```xml
+<controls:CustomSwitch
+    IsToggled="{Binding IsSwitchOn, Mode=TwoWay}"
+    OnColor="#FF4CAF50"
+    OffColor="#FF9E9E9E"
+    ThumbColor="#FFFFFFFF"
+    ThumbSize="24"
+    ThumbCornerRadius="12"
+    TrackCornerRadius="14"
+    TrackWidth="50"
+    TrackHeight="30"/>
+```
+
+
 
 
 ## 🚀 Getting Started
