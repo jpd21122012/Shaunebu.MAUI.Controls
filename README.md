@@ -13,6 +13,7 @@
 | [**FloatingChatButton**](#floatingchatbutton) | Smart circular action button with chat features | [Details](Docs/FloatingChatButton.md) |
 | [**KanbanBoard**](#kanbanboard) | Drag-and-drop task management board | [Details](Docs/KanbanBoard.md) |
 | [**DockLayout**](#docklayout) |  Edge-docking container with priority and animation support | [Details](Docs/DockLayout.md) |
+| [**SegmentedControl**](#segmentedcontrol) |  A customizable and feature-rich segmented control | [Details](Docs/SegmentedControl.md) |
 ---
 
 ## ✨ FloatingChatButton
@@ -100,6 +101,30 @@
         <Label Text="Content"/>
     </Frame>
 </controls:DockLayout>
+```
+
+## ✨ SegmentedControl
+`Shaunebu.Controls.SegmentedControl`
+
+### Features
+- Fully customizable segment content
+- Disable specific segments or entire control
+- Configurable selection animations
+- Icons, text, or any custom content
+- Horizontal or vertical layout
+- Dynamic item updates
+
+```xml
+<controls:SegmentedControl
+    Items="{Binding Options}"
+    SelectedIndex="{Binding SelectedOptionIndex}"
+    SelectedBackgroundColor="RoyalBlue"
+    UnselectedBackgroundColor="LightGray"
+    SelectedTextColor="White"
+    UnselectedTextColor="Black"
+    CornerRadius="10"
+    BorderColor="Gray"
+    BorderWidth="1" />
 ```
 
 

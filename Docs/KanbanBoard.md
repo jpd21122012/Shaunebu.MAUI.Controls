@@ -157,4 +157,4 @@ public class KanbanViewModel : ObservableObject
 
 ## License
 
-MIT License © 2025 [Jorge Perales Diaz](https://jpdblog.com/)
+MIT License © 2025 [Jorge Perales Diaz](https://shaunebu.com/)

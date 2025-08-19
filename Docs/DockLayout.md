@@ -139,4 +139,4 @@ A professional docking panel for .NET MAUI applications
 
 ## License
 
-MIT License © 2025 [Jorge Perales Diaz](https://jpdblog.com/)
+MIT License © 2025 [Jorge Perales Diaz](https://shaunebu.com/)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="Shaunebu.Controls.Controls.SegmentedControl"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="segmentedControl">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="DefaultItemTemplate">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="{Binding .}"
+                    VerticalOptions="Center" />
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid
+            x:Name="containerGrid"
+            ColumnSpacing="0"
+            RowSpacing="0">
+            <!--  Segments will be added here programmatically  -->
+        </Grid>
+    </ContentView.Content>
+</ContentView>

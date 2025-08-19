@@ -125,10 +125,10 @@ Messages = new ObservableCollection<ChatMessage>();
 
 Report issues:  
 
-📧 [jorge.p@jpdblog.com](https://mailto:jorge.p@shaunebu.com/)  
-🐛 [GitHub Issues](https://github.com/jpd21122012/FloatingChatButton/issues)
+📧 [support@jpdblog.com](https://mailto:support@shaunebu.com)  
+🐛 [GitHub Issues](https://github.com/jpd21122012/Shaunebu.MAUI.Controls/issues)
 
 📄 License
 ----------
 
-MIT License © 2025 [Jorge Perales Diaz](https://jpdblog.com/)
+MIT License © 2025 [Jorge Perales Diaz](https://shaunebu.com/)
