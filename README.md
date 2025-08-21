@@ -14,7 +14,8 @@
 | [**KanbanBoard**](#kanbanboard) | Drag-and-drop task management board | [Details](Docs/KanbanBoard.md) |
 | [**DockLayout**](#docklayout) |  Edge-docking container with priority and animation support | [Details](Docs/DockLayout.md) |
 | [**SegmentedControl**](#segmentedcontrol) |  A customizable and feature-rich segmented control | [Details](Docs/SegmentedControl.md) |
-| [**Custom Switch**](#customswitch) | A fully customizable switch contro | [Details](Docs/CustomSwitch.md) |
+| [**Custom Switch**](#customswitch) | A fully customizable switch control | [Details](Docs/CustomSwitch.md) |
+| [**Chips Control**](#chipscontrol) | Customize chip appearance with a lot of options | [Details](Docs/Chips.md) |
 ---
 
 ## ✨ FloatingChatButton
@@ -152,6 +153,32 @@
     TrackCornerRadius="14"
     TrackWidth="50"
     TrackHeight="30"/>
+```
+
+
+## ✨ Chip Control
+`Shaunebu.Controls.Chip`
+
+### Features
+- Text, icon, closable, and badge chips
+- Single, multiple, or no selection
+- Full control over colors, borders, and appearance
+- Number badges and status indicators
+- Click, close, and selection events
+- Full data binding support
+
+```xml
+<controls:Chip 
+    Text="Basic Chip"
+    ChipBackgroundColor="#FFE0E0E0"
+    TextColor="Black"
+    CornerRadius="16"/>
+```
+
+```xml
+<controls:ChipsGroup 
+    ChipItems="{Binding ChipModels}"
+    SelectionMode="Multiple"/>
 ```
 
 
