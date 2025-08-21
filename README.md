@@ -16,6 +16,7 @@
 | [**SegmentedControl**](#segmentedcontrol) |  A customizable and feature-rich segmented control | [Details](Docs/SegmentedControl.md) |
 | [**Custom Switch**](#customswitch) | A fully customizable switch control | [Details](Docs/CustomSwitch.md) |
 | [**Chips Control**](#chipscontrol) | Customize chip appearance with a lot of options | [Details](Docs/Chips.md) |
+| [**Touch Effects**](#toucheffects) | Provides advanced touch interaction capabilities for MAUI controls | [Details](Docs/TouchEffects.md) |
 ---
 
 ## ✨ FloatingChatButton
@@ -179,6 +180,26 @@
 <controls:ChipsGroup 
     ChipItems="{Binding ChipModels}"
     SelectionMode="Multiple"/>
+```
+
+
+## ✨ TouchEffects
+`Shaunebu.Controls.TouchEffect`
+
+
+```xml
+<ContentPage xmlns:effects="clr-namespace:YourLibrary.Effects;assembly=YourLibrary">
+    
+    <Button Text="Tap Me">
+        <Button.Effects>
+            <effects:TouchEffect 
+                PressedBackgroundColor="LightBlue"
+                PressedOpacity="0.7"
+                Command="{Binding TapCommand}" />
+        </Button.Effects>
+    </Button>
+
+</ContentPage>
 ```
 
 

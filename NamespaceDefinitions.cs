@@ -3,6 +3,8 @@
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Controls")]
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Enums")]
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Events")]
+[assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Effects")]
+[assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Helpers")]
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Converters")]
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Extensions")]
 [assembly: XmlnsDefinition("http://schemas.shaunebu.com/maui/controls", "Shaunebu.Controls.Models")]
