@@ -2,8 +2,11 @@
 ![NuGet Version](https://img.shields.io/nuget/v/Shaunebu.MAUI.Controls?color=blue&label=NuGet)
 ![Platform Support](https://img.shields.io/badge/Platforms-Android%20|%20iOS-lightgrey)
 ![MAUI Version](https://img.shields.io/badge/.NET%20MAUI-%3E%3D9.0-blueviolet)
+
 <a href="https://www.buymeacoffee.com/jorgepd" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" align="left" style="height: 37px !important;width: 170px !important;" ></a>
+
 <br>
+
 ![MAUI Controls Showcase](https://jpdblog.blob.core.windows.net/apps/ShaunebuControls.png)  
 
 ## 📦 Included Controls
@@ -17,7 +20,7 @@
 | [**Custom Switch**](#customswitch) | A fully customizable switch control | [Details](Docs/CustomSwitch.md) |
 | [**Chips Control**](#chipscontrol) | Customize chip appearance with a lot of options | [Details](Docs/Chips.md) |
 | [**Touch Effects**](#toucheffects) | Provides advanced touch interaction capabilities for MAUI controls | [Details](Docs/TouchEffects.md) |
----
+
 
 ## ✨ FloatingChatButton
 `Shaunebu.Controls.FloatingChatButton`
