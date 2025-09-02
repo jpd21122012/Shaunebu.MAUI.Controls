@@ -35,7 +35,7 @@ A professional docking panel for .NET MAUI applications
 
 2. Register the namespace:
    ```xml
-   xmlns:kanban="clr-namespace:Shaunebu.MAUI.Controls;assembly=Shaunebu.MAUI.Controls.DockLayout"
+   xmlns:dock="clr-namespace:Shaunebu.MAUI.Controls;assembly=Shaunebu.MAUI.Controls.DockLayout"
    ```
 
 ## Usage

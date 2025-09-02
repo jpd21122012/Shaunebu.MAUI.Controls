@@ -20,6 +20,7 @@
 | [**Custom Switch**](#customswitch) | A fully customizable switch control | [Details](Docs/CustomSwitch.md) |
 | [**Chips Control**](#chipscontrol) | Customize chip appearance with a lot of options | [Details](Docs/Chips.md) |
 | [**Touch Effects**](#toucheffects) | Provides advanced touch interaction capabilities for MAUI controls | [Details](Docs/TouchEffects.md) |
+| [**Shimmer**](#shimmer) | A lightweight shimmer/skeleton loader control for .NET MAUI | [Details](Docs/Shimmer.md) |
 
 
 ## ✨ FloatingChatButton
@@ -204,6 +205,81 @@
 
 </ContentPage>
 ```
+
+
+## ✨ Shimmer
+`Shaunebu.Controls.ShimmerWrapper`
+
+### Features
+*   **Any View Support** – Wrap `Image`, `Label`, `Layouts`, or custom content
+*   **Shapes** – Built-in `Rectangle`, `RoundedRectangle`, `Circle` placeholders
+*   **CornerRadius** – Fully adjustable corner radius
+*   **Gradient Animation** – Smooth shimmer animation over content
+*   **Animation Direction** – LeftToRight, RightToLeft, TopToBottom, BottomToTop
+*   **Shimmer Customization** – Control `ShimmerSpeed`, `ShimmerWidth`, `ShimmerColor`, `BaseColor`
+*   **Placeholder Template** – Provide custom skeleton layout
+*   **ShimmerOverlay** – Optional overlay for custom shimmer visuals
+
+```xml
+<controls:ShimmerWrapper
+    IsLoading="True"
+    Shape="RoundedRectangle"
+    CornerRadius="16"
+    ShimmerSpeed="300"
+    ShimmerWidth="0.25"
+    ShimmerColor="#80FFFFFF"
+    BaseColor="#20000000"
+    AnimationDirection="LeftToRight"
+    HeightRequest="40"
+    WidthRequest="200"/>
+```
+
+```xml
+<controls:ShimmerWrapper IsLoading="True">
+    <Image
+        Source="dotnet_bot.png"
+        Aspect="AspectFill"
+        HeightRequest="100"
+        WidthRequest="100"/>
+</controls:ShimmerWrapper>
+```
+
+```xml
+<controls:ShimmerWrapper IsLoading="True">
+            <controls:ShimmerWrapper.PlaceholderTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing="15">
+
+                        <BoxView
+                            CornerRadius="25"
+                            HeightRequest="50"
+                            WidthRequest="50" />
+
+
+                        <VerticalStackLayout Spacing="8">
+                            <BoxView
+                                CornerRadius="8"
+                                HeightRequest="15"
+                                WidthRequest="120" />
+                            <BoxView
+                                CornerRadius="8"
+                                HeightRequest="15"
+                                WidthRequest="180" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </controls:ShimmerWrapper.PlaceholderTemplate>
+        </controls:ShimmerWrapper>
+```
+
+```xml
+<VerticalStackLayout Padding="20" Spacing="15">
+    <controls:ShimmerWrapper IsLoading="True" Shape="Circle" />
+    <controls:ShimmerWrapper IsLoading="True" Shape="RoundedRectangle" />
+    <controls:ShimmerWrapper IsLoading="True" Shape="Rectangle" />
+</VerticalStackLayout>
+```
+
 
 
 
