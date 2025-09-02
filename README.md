@@ -21,6 +21,7 @@
 | [**Chips Control**](#chipscontrol) | Customize chip appearance with a lot of options | [Details](Docs/Chips.md) |
 | [**Touch Effects**](#toucheffects) | Provides advanced touch interaction capabilities for MAUI controls | [Details](Docs/TouchEffects.md) |
 | [**Shimmer**](#shimmer) | A lightweight shimmer/skeleton loader control for .NET MAUI | [Details](Docs/Shimmer.md) |
+| [**MaterialTextField**](#materialtextfield) |A fully customizable Material Design-inspired text field for .NET MAUI with validation, floating labels, password visibility toggle, and trailing content support. | [Details](Docs/MaterialTextField.md) |
 
 
 ## ✨ FloatingChatButton
@@ -281,6 +282,91 @@
 ```
 
 
+## ✨ MaterialTextField
+`Shaunebu.Controls.MaterialTextField`
+
+### Features
+*   **Floating Label** – Animates above when entry is focused or has text
+*   **Validation** – Synchronous and asynchronous validation support
+*   **Password Support** – Toggle visibility with image or text
+*   **Trailing Content** – Custom trailing view (icon, button, etc.)
+*   **Helper / Error Text** – Displays validation messages or helper text
+*   **Visual States** – Customizable border, filled or outlined variants
+*   **Password Strength Bar** – Optional visual strength indicator
+*   **Platform-specific UI tweaks** – Bottom line removed on Android/iOS
+
+```xml
+<controls:MaterialTextField
+    Title="Username"
+    AccentColor="DeepSkyBlue"
+    AllowClear="True"
+    BorderThickness="1.5"
+    CornerRadius="10"
+    HelperText="Your unique username"
+    Icon="icon_chip_close.png"
+    KeyboardType="Text"
+    Placeholder="Enter your username"
+    ValidationErrorMessage="Username must be 4-12 alphanumeric characters"
+    ValidationPattern="^[a-zA-Z0-9]{4,12}$"
+    Variant="Outlined" />
+
+<!--  Password Field with toggle images + strength  -->
+<controls:MaterialTextField
+    Title="Password"
+    AccentColor="DarkViolet"
+    AllowClear="False"
+    CornerRadius="12"
+    Icon="dotnet_bot.png"
+    IsPassword="True"
+    PasswordHiddenImage="icon_chip_close.png"
+    PasswordStrengthEnabled="True"
+    PasswordVisibleImage="dotnet_bot.png"
+    Placeholder="Enter your password"
+    Variant="Filled" />
+
+<!--  Field with async validation  -->
+<controls:MaterialTextField
+    Title="Email"
+    AccentColor="Teal"
+    BorderThickness="2"
+    CornerRadius="8"
+    HelperText="We'll send you a verification email"
+    Icon="dotnet_bot.png"
+    Placeholder="Enter your email"
+    ValidationErrorMessage="Please enter a valid email"
+    ValidationPattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+    Variant="Outlined" />
+
+<!--  Field with leading content (prefix)  -->
+<controls:MaterialTextField
+    Title="Phone"
+    AccentColor="DarkBlue"
+    AllowClear="True"
+    KeyboardType=""
+    Placeholder="Enter your phone number"
+    Variant="Outlined">
+    <controls:MaterialTextField.Validations>
+        <validations:RegexValidation Pattern="^\d{10}$" Message="Must be 10 digits"/>
+    </controls:MaterialTextField.Validations>
+</controls:MaterialTextField>
+
+
+<controls:MaterialTextField
+    Title="Username"
+    AccentColor="DeepSkyBlue"
+    AllowClear="True"
+    CornerRadius="8"
+    FilledColor="#FFF0F0F0"
+    HelperText="Your unique username"
+    Icon="icon_chip_close.png"
+    KeyboardType="Text"
+    Placeholder="Enter your username"
+    PlaceholderColor="LightGray"
+    TitleColor="Gray"
+    ValidationErrorMessage="Username must be 4-12 alphanumeric characters"
+    ValidationPattern="^[a-zA-Z0-9]{4,12}$"
+    Variant="Outlined" />
+```
 
 
 
@@ -293,13 +379,13 @@ dotnet add package Shaunebu.MAUI.Controls
 Basic Usage
 Add the namespace:
 
-```
+```xml
 xmlns:controls="clr-namespace:Shaunebu.MAUI.Controls;assembly=Shaunebu.MAUI.Controls"
 ```
 Use any control:
 
-xml
-```
+
+```xml
 <controls:FloatingChatButton 
     Command="{Binding OpenChatCommand}"
     Icon="chat.png"/>
