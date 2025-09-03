@@ -22,6 +22,7 @@
 | [**Touch Effects**](#toucheffects) | Provides advanced touch interaction capabilities for MAUI controls | [Details](Docs/TouchEffects.md) |
 | [**Shimmer**](#shimmer) | A lightweight shimmer/skeleton loader control for .NET MAUI | [Details](Docs/Shimmer.md) |
 | [**MaterialTextField**](#materialtextfield) |A fully customizable Material Design-inspired text field for .NET MAUI with validation, floating labels, password visibility toggle, and trailing content support. | [Details](Docs/MaterialTextField.md) |
+| [**PinView**](#pinview) |A fully customizable PIN entry control for .NET MAUI with secure input, animated PIN boxes, focus animations, and commands/events for PIN completion. | [Details](Docs/PinView.md) |
 
 
 ## ✨ FloatingChatButton
@@ -367,6 +368,68 @@
     ValidationPattern="^[a-zA-Z0-9]{4,12}$"
     Variant="Outlined" />
 ```
+
+
+## ✨ PinView
+`Shaunebu.Controls.PinView`
+
+### Features
+*   **PIN Entry** – Secure numeric or alphanumeric PIN input
+*   **Custom PIN Length** – Supports any number of boxes
+*   **Secure Mode** – Show dots instead of actual characters
+*   **Animated Boxes** – Focus and value animations
+*   **Auto-dismiss Keyboard** – Optionally hides keyboard on completion
+*   **Customizable Box UI** – Size, spacing, shape, color, and font
+*   **Tap to Focus** – Tap anywhere on the box to focus the input
+*   **Command & Event** – Execute code when PIN entry is complete
+
+```xml
+<VerticalStackLayout Padding="20" Spacing="25">
+
+    <!--  Default PINView  -->
+    <Label FontAttributes="Bold" Text="Default 4-digit PIN" />
+    <controls:PinView
+        x:Name="pinDefault"
+        AutoDismissKeyboard="True"
+        PINLength="4" />
+
+    <!--  6-digit PIN with Password  -->
+    <Label FontAttributes="Bold" Text="6-digit PIN with Password" />
+    <controls:PinView
+        x:Name="pinPassword"
+        AutoDismissKeyboard="True"
+        BoxBackgroundColor="#FFEFEFEF"
+        BoxFocusAnimation="ZoomInOut"
+        BoxFocusColor="DodgerBlue"
+        IsPassword="True"
+        PINLength="6"
+        Color="DarkGray" />
+
+    <!--  Custom Spacing, Size and Shape  -->
+    <Label FontAttributes="Bold" Text="Custom Size, Shape, and Spacing" />
+    <controls:PinView
+        x:Name="pinCustom"
+        BoxFocusColor="LimeGreen"
+        BoxShape="RoundCorner"
+        BoxSize="60"
+        BoxSpacing="15"
+        BoxStrokeThickness="3"
+        DotSize="25"
+        PINLength="4"
+        Color="DarkGreen" />
+
+    <!--  Alphanumeric PIN  -->
+    <Label FontAttributes="Bold" Text="Alphanumeric Input" />
+    <controls:PinView
+        x:Name="pinAlpha"
+        BoxFocusColor="DeepPink"
+        PINInputType="AlphaNumeric"
+        PINLength="5"
+        Color="Purple" />
+
+</VerticalStackLayout>
+```
+
 
 
 
