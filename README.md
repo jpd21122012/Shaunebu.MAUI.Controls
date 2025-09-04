@@ -23,6 +23,7 @@
 | [**Shimmer**](#shimmer) | A lightweight shimmer/skeleton loader control for .NET MAUI | [Details](Docs/Shimmer.md) |
 | [**MaterialTextField**](#materialtextfield) |A fully customizable Material Design-inspired text field for .NET MAUI with validation, floating labels, password visibility toggle, and trailing content support. | [Details](Docs/MaterialTextField.md) |
 | [**PinView**](#pinview) |A fully customizable PIN entry control for .NET MAUI with secure input, animated PIN boxes, focus animations, and commands/events for PIN completion. | [Details](Docs/PinView.md) |
+| [**RatingView**](#ratingview) |A fully customizable, graphics-based rating control for .NET MAUI. Supports fractional ratings, custom shapes, colors, spacing, and stroke styles. Ideal for star ratings, hearts, or any custom SVG path shape. | [Details](Docs/RatingView.md) |
 
 
 ## ✨ FloatingChatButton
@@ -429,6 +430,132 @@
 
 </VerticalStackLayout>
 ```
+
+
+## ✨ RatingView
+`Shaunebu.Controls.RatingView`
+
+### Features
+*   **Fractional Ratings** – Supports partial fills for half or decimal ratings.
+    
+*   **Custom Shapes** – Render any SVG path as rating items.
+    
+*   **Adjustable Item Count** – Default 5 items, can be increased or decreased.
+    
+*   **Customizable Colors** – Separate fill colors for rated and unrated items.
+    
+*   **Stroke Options** – Set stroke color and width for outline effect.
+    
+*   **Spacing & Size** – Control individual item size and spacing.
+    
+*   **Read-only Mode** – Disable user interaction for display-only ratings.
+    
+*   **Custom Templates** – Provide any UI per rating item via `ItemTemplate`.
+    
+*   **Graphics-based Rendering** – Smooth vector rendering on all platforms.
+
+```xml
+<VerticalStackLayout Padding="20" Spacing="30">
+
+<!--  Default  -->
+<Label FontSize="18" Text="Default (5 stars, editable)" />
+<controls:RatingView
+MaximumRating="5"
+Rating="3"
+Shape="Star" />
+
+<!--  Read-only  -->
+<Label FontSize="18" Text="ReadOnly (locked)" />
+<controls:RatingView
+IsReadOnly="True"
+MaximumRating="5"
+Rating="4.5"
+Shape="Star" />
+
+<!--  Different colors  -->
+<Label FontSize="18" Text="Custom colors (Red / Gray)" />
+<controls:RatingView
+EmptyShapeColor="LightGray"
+FillColor="Red"
+MaximumRating="5"
+Rating="2.5"
+Shape="Star"
+ShapeBorderColor="Black"
+ShapeBorderThickness="1"
+ShapeDiameter="50" />
+
+<!--  Different shapes  -->
+<Label FontSize="18" Text="Hearts!" />
+<controls:RatingView
+EmptyShapeColor="LightGray"
+FillColor="HotPink"
+MaximumRating="5"
+Rating="3"
+Shape="Heart" />
+
+<!--  Many items  -->
+<Label FontSize="18" Text="10 Circles" />
+<controls:RatingView
+FillColor="Orange"
+MaximumRating="10"
+Rating="7.5"
+Shape="Circle"
+ShapeDiameter="25"
+Spacing="4" />
+
+<!--  Binding Example  -->
+<Label FontSize="18" Text="TwoWay Binding Example" />
+<controls:RatingView
+EmptyShapeColor="LightGray"
+FillColor="Gold"
+MaximumRating="5"
+Rating="{Binding UserRating, Mode=TwoWay}"
+Shape="Star" />
+<Label
+FontSize="16"
+Text="{Binding UserRating, StringFormat='User rating: {0}'}"
+TextColor="Gray" />
+
+<!--  Compact mini rating  -->
+<Label FontSize="18" Text="Compact (small, tight spacing)" />
+<controls:RatingView
+MaximumRating="5"
+Rating="1.5"
+Shape="Star"
+ShapeDiameter="20"
+Spacing="2" />
+
+<!--  Custom Item Template Example  -->
+<Label FontSize="18" Text="Custom Item Template Example " />
+<controls:RatingView
+x:Name="MyRating"
+MaximumRating="5"
+Rating="3"
+Spacing="10">
+    <controls:RatingView.ItemTemplate>
+        <DataTemplate>
+            <Border
+            Padding="5"
+            BackgroundColor="LightGray"
+            StrokeShape="RoundRectangle 10">
+                <Label
+                HorizontalOptions="Center"
+                Text="{Binding}"
+                TextColor="DarkBlue"
+                VerticalOptions="Center" />
+            </Border>
+        </DataTemplate>
+    </controls:RatingView.ItemTemplate>
+</controls:RatingView>
+
+</VerticalStackLayout>
+```
+
+
+
+
+
+
 
 
 
