@@ -603,7 +603,7 @@ Example:
 
 Report issues:  
 
-📧 [jorge.p@jpdblog.com](https://mailto:support@shaunebu.com)  
+📧 [jorge.p@shaunebu.com](https://mailto:support@shaunebu.com)  
 🐛 [GitHub Issues](https://github.com/jpd21122012/Shaunebu.MAUI.Controls/issues)
 
 ----------
