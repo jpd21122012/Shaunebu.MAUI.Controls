@@ -24,6 +24,7 @@
 | [**MaterialTextField**](#materialtextfield) |A fully customizable Material Design-inspired text field for .NET MAUI with validation, floating labels, password visibility toggle, and trailing content support. | [Details](Docs/MaterialTextField.md) |
 | [**PinView**](#pinview) |A fully customizable PIN entry control for .NET MAUI with secure input, animated PIN boxes, focus animations, and commands/events for PIN completion. | [Details](Docs/PinView.md) |
 | [**RatingView**](#ratingview) |A fully customizable, graphics-based rating control for .NET MAUI. Supports fractional ratings, custom shapes, colors, spacing, and stroke styles. Ideal for star ratings, hearts, or any custom SVG path shape. | [Details](Docs/RatingView.md) |
+| [**BadgeView**](#badgeview) |A fully customizable badge control for .NET MAUI with dynamic positioning, animations, interactive tap gestures, and commands/events for badge taps. | [Details](Docs/BadgeView.md) |
 
 
 ## ✨ FloatingChatButton
@@ -554,7 +555,64 @@ Spacing="10">
 
 
 
+## ✨ BadgeView
+`Shaunebu.Controls.BadgeView`
 
+### Features
+*   **Dynamic Badge Text** – Shows numbers, text, or custom templates
+    
+*   **Badge Shapes** – Circle, Rectangle, Pill, or Custom shapes
+    
+*   **Badge Types** – Primary, Secondary, Success, Error, Warning, Info, Custom
+    
+*   **Animations** – Bounce, Pulse, Shake, Fade, Scale, or None
+    
+*   **Interactive Tap** – Tap events and commands supported
+    
+*   **Auto Hide** – Hide badge when value is empty or zero
+    
+*   **Custom Styling** – Background, text, stroke, corner radius, font size, and color
+    
+*   **Dynamic Sizing** – Badge width adjusts to text length
+    
+*   **Badge Positioning** – TopRight, TopLeft, BottomRight, BottomLeft
+
+```xml
+<VerticalStackLayout Padding="20" Spacing="25">
+
+    <!-- Simple Badge on a Button -->
+    <controls:BadgeView
+        BadgeText="5"
+        BadgeType="Warning"
+        Command="{Binding BadgeTappedCommand}"
+        CommandParameter="Hello from badge!"
+        IsInteractive="True">
+        <controls:BadgeView.MainContent>
+            <Button Text="Interactive"/>
+        </controls:BadgeView.MainContent>
+    </controls:BadgeView>
+
+    <!-- Badge with Auto Hide -->
+    <controls:BadgeView
+        BadgeText="0"
+        AutoHide="True"
+        BadgeType="Success">
+        <controls:BadgeView.MainContent>
+            <Label Text="No Badge Visible"/>
+        </controls:BadgeView.MainContent>
+    </controls:BadgeView>
+
+    <!-- Badge with Custom Template -->
+    <controls:BadgeView
+        BadgeType="Custom"
+        BadgeTemplate="{StaticResource CustomBadgeTemplate}">
+        <controls:BadgeView.MainContent>
+            <Button Text="Custom Badge"/>
+        </controls:BadgeView.MainContent>
+    </controls:BadgeView>
+
+</VerticalStackLayout>
+```
 
 
 
@@ -603,7 +661,7 @@ Example:
 
 Report issues:  
 
-📧 [jorge.p@shaunebu.com](https://mailto:support@shaunebu.com)  
+📧 [jorge.p@jpdblog.com](https://mailto:support@shaunebu.com)  
 🐛 [GitHub Issues](https://github.com/jpd21122012/Shaunebu.MAUI.Controls/issues)
 
 ----------
